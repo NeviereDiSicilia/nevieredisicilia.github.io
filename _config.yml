@@ -1,1 +1,8 @@
+title: Neviere di Sicilia
+description: 
+google_analytics: 
+show_downloads: false
 theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
