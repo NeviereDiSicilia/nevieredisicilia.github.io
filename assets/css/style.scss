@@ -5,8 +5,9 @@
 .main-content { max-width: 120rem; }
 
 .page-header {
-  width: inherit;
+  /*width: inherit;*/
   color: #ffffff;
   background-color: transparent;
+  background-size: auto;
   background-image: url("/images/neviera_monte_fossa_neve.jpg")
 }
