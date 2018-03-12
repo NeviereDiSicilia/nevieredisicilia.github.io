@@ -1,8 +1,12 @@
 - link: /
   name: Mappa Neviere
+  highlight: true
 - link: /elenco_neviere/
   name: Elenco Neviere
+  highlight: true
 - link: /progetto
   name: Progetto e Persone
+  highlight: true
 - link: /contatti/
   name: Contatti
+  highlight: true
