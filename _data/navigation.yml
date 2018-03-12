@@ -7,6 +7,6 @@
 - link: /progetto
   name: Progetto e Persone
   highlight: true
-- link: /contatti
+- link: /contatti.md
   name: Contatti
   highlight: true
