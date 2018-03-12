@@ -1,3 +1,4 @@
+<page-header>
 <nav>
   {% for item in site.data.navigation %}
     <a href="{{ item.link }}"
@@ -7,3 +8,4 @@
     </a>
   {% endfor %}
 </nav>
+</page-header>
