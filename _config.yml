@@ -29,7 +29,7 @@ github_username:
 # markdown: kramdown
 #  kramdown: 
 #   parse_block_html: true
-theme: 
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
   # - jekyll-mentions
