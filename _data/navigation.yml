@@ -1,12 +1,15 @@
-- link: /
+- link: /index.html
   name: Mappa Neviere
   highlight: true
-- link: /elenco_neviere
+- link: /elenco_neviere.html
   name: Elenco Neviere
   highlight: true
-- link: /progetto
+- link: /progetto.html
   name: Progetto e Persone
   highlight: true
-- link: /contatti/
+- link: /contribuisci.html
+  name: Contribuisci
+  highlight: true
+- link: /contatti.html
   name: Contatti
   highlight: true
