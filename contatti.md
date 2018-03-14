@@ -1,6 +1,6 @@
 ---
 layout: default
 title: Contatti
-permalink: contatti.html
+permalink: contatti.md
 ---
 ###Contatti
