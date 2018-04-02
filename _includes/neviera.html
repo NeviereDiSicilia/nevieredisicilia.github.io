@@ -20,24 +20,20 @@ var get = parseGetVars();
 var neviera = get['neviera'];
 //document.write(neviera);
 </script>
-<br/>
 
-{% capture nev %}<script type="text/javascript">document.write(neviera);</script>{% endcapture %} 
-nev: {{ nev }}<br/> 
-{% assign neviera = {{nev}} %}
-neviera: {{neviera}}<br/>
+{% capture neviera %}<script type="text/javascript">document.write(neviera);</script>{% endcapture %} 
+<h3>Neviera: {{neviera}}<br/>
 
 {% for member in site.data.Neviere_di_Sicilia %}
-mn: {{member.name}} - nev: {{nev}}<br/> 
-{% if {{member.name}} == {{nev}} %}
+{% if {{member.name}} == {{neviera}} %}
 	{% assign condizione = true %}
 {% else %}
 	{% assign condizione = false %}
 {% endif %}
 	condizione: {{ condizione }}<br/>
-	nev: {{ nev }} - member: {{ member.name }}<br/>
+	nev: {{ neviera }} - member: {{ member.name }}<br/>
 	{% if condizione == true %}
-		nev: {{ nev }} - neviera: {{ neviera }} - member: {{ member.name }}<br/>
+		neviera: {{ neviera }} - member: {{ member.name }}<br/>
 		<table>
 			<tr>
 				<td>Nome Neviera</td><td>{{ member.name }}</td>
@@ -50,5 +46,3 @@ mn: {{member.name}} - nev: {{nev}}<br/>
 		do nothing<br/>
 	{% endif %}
 {% endfor %}
-
-
