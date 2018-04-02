@@ -1,0 +1,10 @@
+<ul>
+{% for member in site.data.Neviere_di_Sicilia %}
+  <li>
+      
+      <!--<a href="neviera.html?mname={{ member.name }}" target="_blank">({{ member.provincia }}) - Comune di {{ member.comune }} - Neviera: {{ member.name }}</a>-->
+ 	  {% assign neviera = {{ member.name }} %}
+	  <a href="neviera.html?neviera={{ member.name }}" target="_blank">({{ member.provincia }}) - Comune di {{ member.comune }} - Neviera: {{ member.name }}</a>
+  </li>
+{% endfor %}
+</ul>
