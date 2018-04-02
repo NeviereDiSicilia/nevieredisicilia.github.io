@@ -25,6 +25,7 @@ var neviera = get['neviera'];
 <h3>Neviera: {{neviera}}<br/><br/>
 
 {% for member in site.data.Neviere_di_Sicilia %}
+	{% comment %}
 	{% if member.name == neviera %}
 		{% assign condizione = true %}
 	{% else %}
@@ -33,6 +34,8 @@ var neviera = get['neviera'];
 	condizione: {{ condizione }}<br/>
 	nev: {{ neviera }} - mn: {{ member.name }}<br/>
 	{% if condizione == true %}
+	{% endcomment %}
+	{% if member.name == neviera %}
 		<table>
 			<tr>
 				<td>Nome Neviera</td><td>{{ member.name }}</td>
