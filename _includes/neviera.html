@@ -28,13 +28,12 @@ var neviera = get['neviera'];
    {% for member in site.data.Neviere_di_Sicilia %}
 	{% capture neviera %}<script type="text/javascript">document.write(neviera);</script>{% endcapture %}
 	{% if {{neviera}} == member.name %}
-		
-			<tr>
-				<td>Nome Neviera</td><td>{{ member.name }}</td>
-			</tr>
-			<tr>
-				<td>Comune di</td><td>{{ member.comune }} ({{ member.provincia }})</td>	
-			</tr>
+		<tr>
+			<td>Nome Neviera</td><td>{{ member.name }}</td>
+		</tr>
+		<tr>
+			<td>Comune di</td><td>{{ member.comune }} ({{ member.provincia }})</td>	
+		</tr>
 	{% else %}
 		<tr><td>do nothing</td></tr>
 	{% endif %}
