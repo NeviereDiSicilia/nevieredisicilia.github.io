@@ -4,7 +4,7 @@
       
       <!--<a href="neviera.html?mname={{ member.name }}" target="_blank">({{ member.provincia }}) - Comune di {{ member.comune }} - Neviera: {{ member.name }}</a>-->
       {% assign neviera = {{ member.name }} %}
-      <a href="neviera.html?{{ member.name }}" target="_blank">({{ member.provincia }}) - Comune di {{ member.comune }} - Neviera: {{ member.name }}</a>
+      <a href="neviera.html?{{ neviera }}" target="_blank">({{ member.provincia }}) - Comune di {{ member.comune }} - Neviera: {{ member.name }}</a>
   </li>
 {% endfor %}
 </ul>
