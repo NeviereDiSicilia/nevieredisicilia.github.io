@@ -1,41 +1,10 @@
-<script type="text/javascript">
-function parseGetVars()
-{
-  var args = new Array();
-  var query = window.location.search.substring(1);
-  if (query)
-  {
-    var strList = query.split('&');
-    for(str in strList)
-    {
-      var parts = strList[str].split('=');
-      args[unescape(parts[0])] = unescape(parts[1]);
-    }
-  }
-  return args;
-}</script>
-
-<script type="text/javascript">
-var get = parseGetVars();
-var neviera = get['neviera'];
-//document.write(neviera);
-</script>
-
-{% capture neviera %}<script type="text/javascript">document.write(neviera);</script>{% endcapture %} 
 <h3>Neviera: {{neviera}}<br/><br/>
 
 <table>
-   {% for member in site.data.Neviere_di_Sicilia %}
-	{% capture neviera %}<script type="text/javascript">document.write(neviera);</script>{% endcapture %}
-	{% if neviera == member.name %}
-		<tr>
+   		<tr>
 			<td>Nome Neviera</td><td>{{ member.name }}</td>
 		</tr>
 		<tr>
 			<td>Comune di</td><td>{{ member.comune }} ({{ member.provincia }})</td>	
 		</tr>
-	{% else %}
-		<tr><td>do nothing</td></tr>
-	{% endif %}
-   {% endfor %}
 </table>
