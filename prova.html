@@ -10,11 +10,11 @@
   ).done(function(dataset) {
   // dataset object doc'd below
   //document.write (dataset.records[0]);
-  var nneviere = dataset.records.lenght;
+  var nneviere = (dataset.records).lenght;
   var i;
   document.write ('l: ', nneviere);
-  for (i = 0; i <= dataset.records.length; i++) { 
-    document.write(dataset.records.nome[i], "<br>");
+  for (i = 0; i < (dataset.records).length; i++) { 
+    document.write((dataset.records).nome[i], + "<br>");
     }
   });
 </script>
