@@ -9,7 +9,10 @@
     }
   ).done(function(dataset) {
   // dataset object doc'd below
-  //document.write (dataset.records[0]);
+  document.write (dataset.records[0]);
+  var neviere = new Array();
+  neviere = dataset.records;
+  document.write(neviere[0]);
   var nneviere = (dataset.records).lenght;
   var i;
   document.write ('l: ', nneviere);
