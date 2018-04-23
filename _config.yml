@@ -49,7 +49,7 @@ plugins:
 page_gen:
   - data: 'Neviere_di_Sicilia'
     template: 'neviera'
-    name: 'name'
+    name: 'nome'
     dir: 'neviere'
 defaults:
   -
