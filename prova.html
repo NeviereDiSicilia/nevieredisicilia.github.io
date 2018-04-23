@@ -2,18 +2,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <script type="text/javascript" src="https:nevieredisicilia.github.io/js/csv.js"></script>
-1)
+
 <script type="text/javascript">
   CSV.fetch({
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
-  }
-).done(function(dataset) {
+    }
+  ).done(function(dataset) {
   // dataset object doc'd below
-  document.write ('A: ', dataset.records[0]);
-});
+  //document.write (dataset.records[0]);
+  var i;
+  var nome;
+  for (i = 0; i <= dataset.length; i++) { 
+    var text += dataset.records.nome[i] + "<br>";
+    }
+  });
 </script>
-<br/>
-2)
-<script type="text/javascript">
-   document.write ('A');
-</script>
+
