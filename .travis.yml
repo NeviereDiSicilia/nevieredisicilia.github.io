@@ -7,7 +7,7 @@ script:
 after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
-- git config user.name "iltempe"
+- git config user.name "picomiles"
 - git config user.email ${EMAIL}
 - rsync -az --delete --exclude '.git*' ../_site/ .
 - touch .nojekyll
