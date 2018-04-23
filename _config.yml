@@ -47,13 +47,10 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 page_gen:
-  - index_files: false
-    data: 'Neviere_di_Sicilia'
-    # template: <<name of the template to use to generate the page>>
+  - data: 'Neviere_di_Sicilia'
+    template: 'neviera'
     name: 'name'
     dir: 'neviere'
-    # extension: <<extension used to generate the filename>>
-    # filter: <<property to filter data records by>>
 defaults:
   -
     scope:
