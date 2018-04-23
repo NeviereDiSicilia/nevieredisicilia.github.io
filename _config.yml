@@ -34,7 +34,6 @@ plugins:
   - jekyll-feed
   # - jekyll-mentions
   # - jekyll-paginate
-gems:
   - jekyll-mentions
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
