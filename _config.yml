@@ -29,12 +29,11 @@ github_username:
 # markdown: kramdown
 #  kramdown: 
 #   parse_block_html: true
-theme: jekyll-theme-cayman
+theme: jekyll-cayman-theme-master
 plugins:
   - jekyll-feed
   # - jekyll-mentions
   # - jekyll-paginate
-gems:
   - jekyll-mentions
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
