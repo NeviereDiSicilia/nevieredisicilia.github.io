@@ -10,8 +10,9 @@
   ).done(function(dataset) {
   // dataset object doc'd below
   //document.write (dataset.records[0]);
+  var neviere = dataset.records;
   var i;
-  document.write ('l: ', dataset.lenght);
+  document.write ('l: ', neviere.lenght);
   for (i = 0; i <= dataset.records.length; i++) { 
     document.write(dataset.records.nome[i], "<br>");
     }
