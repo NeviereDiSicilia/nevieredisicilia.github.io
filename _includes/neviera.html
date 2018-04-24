@@ -22,7 +22,7 @@ var neviera = get['neviera'];
 </script>
 
 <script type="text/javascript">
-  var selected_neviera;
+  var selected_neviera new Array();
   CSV.fetch({
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
     }
@@ -68,7 +68,7 @@ var neviera = get['neviera'];
 
 <table>
    		<tr>
-			<td>Nome Neviera</td><td><script type="text/javascript">document.write(selected_neviera(2));</script></td>
+			<td>Nome Neviera</td><td><script type="text/javascript">document.write(selected_neviera[2]);</script></td>
 		</tr>
 		<tr>
 			<td>Comune di</td><td><script type="text/javascript">document.write(selected_neviera[4]);</script>(<script type="text/javascript">document.write(selected_neviera[5]);</script>)</td>	
