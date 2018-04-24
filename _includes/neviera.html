@@ -24,6 +24,25 @@ document.write(neviera);
 
 <br/>
 
+<script type="text/javascript" src="https:nevieredisicilia.github.io/js/csv.js"></script>
+<script type="text/javascript">
+  CSV.fetch({
+    url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
+    }
+  ).done(function(dataset) {
+    
+  var neviere = new Array();
+  neviere = dataset.records;
+  document.write(neviera);
+  var i;
+  for (i = 0; i < neviere.length; i++) { 
+    var neviera = new Array();
+    neviera = neviere[i];
+      document.write(neviera[2] + "<br>");
+   }
+});
+</script>
+
 
 <h3>Neviera: {{neviera}}<br/><br/>
 
