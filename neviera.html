@@ -81,7 +81,7 @@ var neviera = get['neviera'];
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
     }
   ).done(function(dataset) {
-     return dataset.records;
+     return dataset;
   });	  
   write(lista_neviere);
   var curr_neviera = new Array();
