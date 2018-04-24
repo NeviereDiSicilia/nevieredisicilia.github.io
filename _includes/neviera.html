@@ -20,25 +20,26 @@ var get = parseGetVars();
 var neviera = get['neviera'];
 document.write(neviera);
 </script>
-<script type="text/javascript" src="js/csv.js"></script>
-
 <br/>
 
-<script type="text/javascript" src="https:nevieredisicilia.github.io/js/csv.js"></script>
 <script type="text/javascript">
   CSV.fetch({
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
     }
   ).done(function(dataset) {
-    
-  var neviere = new Array();
-  neviere = dataset.records;
+  
   document.write(neviera);
+  var lista_neviere = new Array();
+  lista_neviere = dataset.records;
+  
   var i;
-  for (i = 0; i < neviere.length; i++) { 
-    var neviera = new Array();
-    neviera = neviere[i];
-      document.write(neviera[2] + "<br>");
+  for (i = 0; i < lista_neviere.length; i++) { 
+    var curr_neviera = new Array();
+    curr_neviera = lista_neviere[i];	  
+    if (curr_neviera[2] = neviera) {
+	  var selected_neviera = new Array();  
+          selected_neviera = curr_neviera;
+    }
    }
 });
 </script>
@@ -48,7 +49,7 @@ document.write(neviera);
 
 <table>
    		<tr>
-			<td>Nome Neviera</td><td>{{ member.nome }}</td>
+			<td>Nome Neviera</td><td>selected_neviera[2]</td>
 		</tr>
 		<tr>
 			<td>Comune di</td><td>{{ member.comune }} ({{ member.provincia }})</td>	
