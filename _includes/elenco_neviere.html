@@ -1,5 +1,5 @@
 <ul>
-{% for member in site.data.Neviere_di_Sicilia %}
+{% for member in site.neviere.Neviere_di_Sicilia %}
   <li>
     <!--<a href="neviera.html?mname={{ member.name }}" target="_blank">({{ member.provincia }}) - Comune di {{ member.comune }} - Neviera: {{ member.name }}</a>-->
     <a href="neviere/{{member.nome}}.html" target="_blank">({{ member.provincia }}) - Comune di {{ member.comune }} - Neviera: {{ member.nome }}</a>
