@@ -45,14 +45,16 @@ var neviera = get['neviera'];
    }
 });
 */
-  var lista_neviere = new Array();
-  lista_neviere = CSV.fetch({
+  var neviere = new Array();
+  neviere = CSV.fetch({
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
     }
-  ).done(function(dataset) {
-     return dataset;
-  });	  
-  write(lista_neviere);
+  ).done(function(dataset));/* {
+     
+  });*/	  
+  document.write(neviere);
+  var lista_neviere = new Array();	
+  var lista_neviere = neviere.records;
   var curr_neviera = new Array();
   var selected_neviera = new Array();
   var i;
