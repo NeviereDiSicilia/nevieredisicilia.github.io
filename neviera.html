@@ -55,7 +55,7 @@ var neviera = get['neviera'];
 
 <script type="text/javascript">
   var selected_neviera = new Array();
-  CSV.fetch({
+  selected_neviera = CSV.fetch({
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
     }
   ).done(function(dataset) {
@@ -65,6 +65,7 @@ var neviera = get['neviera'];
   lista_neviere = dataset.records;
   
   var curr_neviera = new Array();
+  var selected_neviera = new Array();
   var i;
   for (i = 0; i < lista_neviere.length; i++) { 
     curr_neviera = lista_neviere[i];	  
