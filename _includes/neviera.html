@@ -27,20 +27,15 @@ var neviera = get['neviera'];
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
     }
   ).done(function(dataset) {
-    console.log(dataset);
-    });    
-  var lista_neviere = new Array();
-  lista_neviere = dataset.records;
-  
-  var curr_neviera = new Array();
-  var selected_neviera = new Array();
-  var i;
-  for (i = 0; i < lista_neviere.length; i++) { 
-    curr_neviera = lista_neviere[i];	  
-    if (curr_neviera[2] == neviera) {
-          selected_neviera = curr_neviera;
-    }
-   };
+    var lista_neviere = dataset.records;
+    var i;
+    for (i = 0; i < lista_neviere.length; i++) { 
+      var curr_neviera = lista_neviere[i];	  
+         if (curr_neviera[2] == neviera) {
+            var selected_neviera = curr_neviera;
+         }
+    };	  
+  });
 
 /*
   CSV.fetch({
@@ -75,6 +70,6 @@ var neviera = get['neviera'];
 			<td>Nome Neviera</td><td><script type="text/javascript">document.write(selected_neviera[2]);</script></td>
 		</tr>
 		<tr>
-			<td>Comune di</td><td>{{ member.comune }} ({{ member.provincia }})</td>	
+			<td>Comune di</td><td><script type="text/javascript">document.write(selected_neviera[4]);</script>(<script type="text/javascript">document.write(selected_neviera[5]);</script>)</td>	
 		</tr>
 </table>
