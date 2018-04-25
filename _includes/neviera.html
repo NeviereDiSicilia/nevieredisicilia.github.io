@@ -22,7 +22,7 @@ var neviera = get['neviera'];
 </script>
 
 <script type="text/javascript">
-  var selected_neviera;	
+  //var selected_neviera;	
   CSV.fetch({
     url: 'https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv'
     }
@@ -31,9 +31,9 @@ var neviera = get['neviera'];
     var i;
     for (i = 0; i < lista_neviere.length; i++) { 
       var curr_neviera = lista_neviere[i];	  
-         if (curr_neviera[2] == neviera) {
-            selected_neviera = curr_neviera;
-	    return;
+         if (curr_neviera[2] === neviera) {
+            var selected_neviera = curr_neviera;
+	    return selected_neviera;
          }
     };	  
   });
