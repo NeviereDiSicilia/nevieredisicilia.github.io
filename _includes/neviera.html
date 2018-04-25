@@ -65,15 +65,19 @@ var neviera = get['neviera'];
    };	
 */   
 </script>
-
-
 <h3>Neviera: <script type="text/javascript">document.write(neviera);</script><br/><br/>
 
+{% capture selected_neviera %}<script>document.write(neviera);</script>{% endcapture %}
 <table>
+{% for member in site.data.Neviere_di_Sicilia %}
+  {% if member.name == selected_neviera %}
+
    		<tr>
-			<td>Nome Neviera</td><td><script type="text/javascript">document.write(selected_neviera[2]);</script></td>
+			<td>Nome Neviera</td><td><script type="text/javascript">{{member.name}}</script></td>
 		</tr>
 		<tr>
 			<td>Comune di</td><td><script type="text/javascript">document.write(this.selected_neviera[4]);</script>(<script type="text/javascript">document.write(this.selected_neviera[5]);</script>)</td>	
 		</tr>
-</table>
+{% endif %}
+{% endfor %}	
+</table>	
