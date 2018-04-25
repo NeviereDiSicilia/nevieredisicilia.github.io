@@ -67,7 +67,8 @@ var neviera = get['neviera'];
 </script>
 <h3>Neviera: <script type="text/javascript">document.write(neviera);</script><br/><br/>
 
-{% capture selected_neviera %}<script>document.write(neviera);</script>{% endcapture %}
+{% capture selectedneviera %}<script>document.write(neviera);</script>{% endcapture %}
+a {{selectedneviera}}
 <table>
 {% for member in site.data.Neviere_di_Sicilia %}
   {% if member.name == selected_neviera %}
