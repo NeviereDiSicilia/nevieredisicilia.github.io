@@ -28,7 +28,6 @@ var neviera = get['neviera'];
     }
   ).done(function(dataset) {
     console.log(dataset);
-    return dataset.records;
     /*
     var lista_neviere = dataset.records;
     var i;
@@ -42,7 +41,7 @@ var neviera = get['neviera'];
     };*/	  
   });
   
-  var righe2  = CSV.dataset.records;
+  var righe2  = CSV.dataset;
 	
 /*
   CSV.fetch({
