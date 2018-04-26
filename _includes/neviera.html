@@ -1,0 +1,35 @@
+<script type="text/javascript">
+function parseGetVars()
+{
+  var args = new Array();
+  var query = window.location.search.substring(1);
+  if (query)
+  {
+    var strList = query.split('&');
+    for(str in strList)
+    {
+      var parts = strList[str].split('=');
+      args[unescape(parts[0])] = unescape(parts[1]);
+    }
+  }
+  return args;
+}</script>
+
+<script type="text/javascript">
+var get = parseGetVars();
+var neviera = get['neviera'];
+//document.write(neviera);
+</script>
+<h3>Neviera: <script type="text/javascript">document.write(neviera);</script><br/><br/>
+
+var data;
+	$.ajax({
+	  type: "GET",  
+	  url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
+	  dataType: "text",       
+	  success: function(response)  
+	  {
+		data = $.csv.toArrays(response);
+		generateHtmlTable(data);
+	  }   
+	});
