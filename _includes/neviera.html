@@ -29,11 +29,10 @@ var neviera = get['neviera'];
   ).done(function(dataset) {
     var lista_neviere = dataset.records;
     var i;
+    "<table>";
     for (i = 0; i < lista_neviere.length; i++) { 
-      var curr_neviera = lista_neviere[i];	  
+         var curr_neviera = lista_neviere[i];	  
          if (curr_neviera[2] === neviera) {
-            
-	    "<table>";
 		"<tr>";
 			"<td>Nome Neviera</td><td>"document.write(curr_neviera[2])"</td>";
 		"</tr>";
@@ -42,7 +41,8 @@ var neviera = get['neviera'];
 		"</tr>";
 	    
          }
-    };	  
+    };	 
+    "</table>";
   });
   
   
