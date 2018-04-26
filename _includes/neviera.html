@@ -20,7 +20,6 @@ var get = parseGetVars();
 var neviera = get['neviera'];
 //document.write(neviera);
 </script>
-<h3>Neviera: <script type="text/javascript">document.write(neviera);</script><br/><br/>
 
 <script>	
 var data;
@@ -50,4 +49,13 @@ var data;
     <tr>
 	<td>Comune di</td><td><script>document.write(data[4]);</script> (<script>document.write(data[5]);</script>)</td>	
     </tr>
+   <tr>
+	<td>Località</td><td><script>document.write(data[3]);</script></td>
+    </tr>
+    <tr>
+	<td>Coordinate Geografiche (lat/lon)</td><td><script>document.write(data[6]);</script>/<script>document.write(data[7]);</script></td>	
+    </tr>
+    <tr>
+	<td>Descrizione</td><td><script>document.write(data[17]);</script></td>
+    </tr>	
 </table>
