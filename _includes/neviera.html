@@ -71,7 +71,7 @@ var neviera = get['neviera'];
 a {{selectedneviera}}
 <table>
 {% for member in site.data.Neviere_di_Sicilia %}
-  {% if member.name == selectedneviera %}
+  {% comment %}{% if member.name == selectedneviera %}{% endcomment %}
 
    		<tr>
 			<td>Nome Neviera</td><td>{{member.name}}</td>
@@ -79,6 +79,6 @@ a {{selectedneviera}}
 		<tr>
 			<td>Comune di</td><td>{{member.comune}} ({{member.provincia}})</td>	
 		</tr>
-{% endif %}
+{% comment %}{% endif %}{% endcomment %}
 {% endfor %}	
 </table>	
