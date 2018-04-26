@@ -60,29 +60,29 @@ var neviera = get['neviera'];
   ).done(function(dataset) {
     var lista_neviere = dataset.records;
     var i;
-    "<table>";
+    <table>;
     for (i = 0; i < lista_neviere.length; i++) { 
          var curr_neviera = lista_neviere[i];	  
          if (curr_neviera[2] === neviera) {
-		"<tr>";
-			"<td>Nome Neviera</td>";
-		        "<td>";
+		<tr>;
+			<td>"Nome Neviera"</td>;
+		        <td>;
 		            document.write(curr_neviera[2]);
-		        "</td>";
-		"</tr>";
-		"<tr>";
-			"<td>Comune di</td>";
-		        "<td>";
+		        </td>;
+		</tr>;
+		<tr>;
+			<td>"Comune di"</td>;
+		        <td>;
 		            document.write(curr_neviera[4]); 
 		            "(";
 		            document.write(curr_neviera[5]);
 	                    ")";
-	                "</td>";	
-		"</tr>";
+	                </td>;	
+		</tr>;
 	    
          }
     };	 
-    "</table>";
+    </table>;
   });
   
   
