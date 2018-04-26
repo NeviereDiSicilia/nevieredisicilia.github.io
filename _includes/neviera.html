@@ -27,11 +27,27 @@ var data;
 	$.ajax({
 	  type: "GET",  
 	  url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
-	  dataType: "text",       
+	  dataType: "text",
+      async:false,      
 	  success: function(response)  
 	  {
-		data = $.csv.toArrays(response);
-		generateHtmlTable(data);
-	  }   
+		tutto = $.csv.toArrays(response);
+		var i;
+		for (i = 0; i < tutto.length; i++) {
+		    var curr_neviera = tutto[i];	  
+            if (curr_neviera[2] === neviera) {
+			data = curr_neviera;
+		    }		
+		//generateHtmlTable(data);
+	    }   
+	  }
 	});
 </script>
+<table>
+    <tr>
+	<td>Nome Neviera</td><td><script>document.write(data[2]);</script></td>
+    </tr>
+    <tr>
+	<td>Comune di</td><td><script>document.write(data[4]);</script> (<script>document.write(data[5]);</script>)</td>	
+    </tr>
+</table>
