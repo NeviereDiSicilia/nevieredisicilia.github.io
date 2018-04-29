@@ -74,7 +74,11 @@ var data;
 	  }
 	});
 </script>
-
+<script>
+var photo_link = function () {
+return document.write(data[20]);
+}
+</script>
 
 <table>
     <tr>
@@ -132,7 +136,7 @@ var data;
 	<td>Rilevatore</td><td><script>document.write(data[21]);</script></td><td></td>
     </tr>
     <tr>
-	<td></td><td><img src="<script>document.write(data[20]);</script>" /></td><td></td>
+	<td></td><td><img src="photo_link" /></td><td></td>
      </tr>
 </table>
 
