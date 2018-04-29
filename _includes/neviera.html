@@ -43,7 +43,7 @@ var data;
 	});
 </script>
 {% capture photo_link %}<script>document.write(data[20]);</script>{% endcapture %}
-l {{photo_link}}
+
 <table>
     <tr>
 	    <td>Nome Neviera</td><td><script>document.write(data[2]);</script></td><td></td>
@@ -100,6 +100,6 @@ l {{photo_link}}
 	<td>Rilevatore</td><td><script>document.write(data[21]);</script></td><td></td>
     </tr>
     <tr>
-	<td></td><td><a href="{{photo_link}}" target="_blank"><img src="{{photo_link}}" width='380' /></a></td><td></td>
+	<td></td><td><img src="{{photo_link}}" width="380" /></td><td></td>
      </tr>
 </table>
