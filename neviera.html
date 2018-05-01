@@ -96,6 +96,12 @@ var data;
                   };	  
 	  </script>
 	</td>
+	<td>
+	    <script>if (data[24]){
+		      javascript:document.write("<a href=" + data[24] + " target='_blank' ><b>Vedi l'Album Fotografico</b></a>");
+                  };	  
+	    </script>
+	</td> 
      </tr>
 </table>
 <table style="width: 100%; border-style: none;">
@@ -159,15 +165,6 @@ var data;
 	    </script>
 	</td>
     </tr>
-    <tr>
-	<td>Album Fotografico</td>
-	<td>
-	    <script>if (data[24]){
-		      javascript:document.write("<a href=" + data[24] + " target='_blank' >Vedi l'Album</a>");
-                  };	  
-	    </script>
-	</td>
-    </tr>	
     <tr>
 	<td>Rilevatore</td><td><script>document.write(data[21]);</script></td>
     </tr>
