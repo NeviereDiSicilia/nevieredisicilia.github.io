@@ -151,6 +151,24 @@ var data;
 	<td>Spessore dei muri m.</td><td><script>document.write(data[14]);</script></td>
     </tr>
     <tr>
+	<td>Pianta Neviera</td>
+	<td>
+	    <script>if (data[16]){
+		      javascript:document.write("<a href=" + data[16] + " target='_blank' ><img src=" + data[16] + " height='320' /></a>");
+                  };	  
+	    </script>
+	</td>
+    </tr>
+    <tr>
+	<td>Album Fotografico</td>
+	<td>
+	    <script>if (data[24]){
+		      javascript:document.write("<a href=" + data[24] + " target='_blank' >Vedi l'Album</a>");
+                  };	  
+	    </script>
+	</td>
+    </tr>	
+    <tr>
 	<td>Rilevatore</td><td><script>document.write(data[21]);</script></td>
     </tr>
 </table>
