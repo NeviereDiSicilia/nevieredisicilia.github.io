@@ -69,7 +69,9 @@ var data;
 	<td>Località</td><td><script>document.write(data[3]);</script></td>
     </tr>
     <tr>
-	<td>Coordinate Geografiche (lat/lon)</td><td><script>document.write(data[6]);</script>/<script>document.write(data[7]);</script></td>
+	<td>Coordinate Geografiche (lat/lon)</td>
+	<!-- <td><script>document.write(data[6]);</script>/<script>document.write(data[7]);</script></td> -->
+	<td><script>javascript:document.write("<a href='http://www.openstreetmap.org/?mlat=" + data[6] + "&mlon=" + data[7] + "&zoom=14' target='_blank' >" + data[6] + "/" + data[7] + "</a>");</script></td>
     </tr>
     <tr>
 	<td>Altitudine s.l.m. m.</td><td><script>document.write(data[8]);</script></td>
