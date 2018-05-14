@@ -1,0 +1,22 @@
+<table>
+{% for member in site.data.Fonti_Bibliografiche %}
+  <tr>
+    <td>
+      <table>
+       <tr>
+         <td></td>
+       </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+       <tr>
+         <td>
+           <a href="{{member.url foto copertina}}" target="_blank"><img src="{{ member.url foto copertina}} /></a>
+         </td>
+       </tr>
+      </table>
+    </td>
+  </tr>  
+{% endfor %}
+</table>
