@@ -2,7 +2,7 @@
 
 Questo repository accoglie il codice, i dati e quanto necessario alla pubblicazione del sito <a href="https://nevieredisicilia.github.io" target="_blank" ><b>nevieredisicilia.github.io</b></a>
 
-Obiettivo di questo progetto è censire le neviere presenti in Sicilia con il contributo di chiunque è in grado di fornire informazioni esatte sulla loro esistenza.
+Obiettivo di questo progetto è censire le neviere presenti in Sicilia con il contributo di chiunque sia in grado di fornire informazioni esatte sulla loro esistenza.
 
 Il sito permette di visualizzare una mappa del servizio uMap con le neviere attualmente censite e la possibilità di aprire, con un semplice click, per ciascuna neviera, un pop-up contenente alcuni dati relativi alla neviera stessa ed un link che punta alla scheda della neviera contenente tutti i dati inseriti che la riguardano.
 
