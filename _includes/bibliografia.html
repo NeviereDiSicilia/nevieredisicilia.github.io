@@ -2,7 +2,7 @@
 {% for member in site.data.Fonti_Bibliografiche %}
   <tr>
     <td style="width: 50%;">
-      <table>
+      <!--<table>-->
        <tr>
 	 <td>Autore/Autori</td>
          <td>{{member.autore}}</td>
@@ -19,7 +19,7 @@
 	<td>Casa Editrice</td>
 	<td>{{member.editrice}}</td>
        </tr>
-      </table>
+      <!--</table>-->
     </td>
     <td style="width: 50%;">
        <a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="width:100%;" /></a>
