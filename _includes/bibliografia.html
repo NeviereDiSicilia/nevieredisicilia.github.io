@@ -1,8 +1,8 @@
 <table style="margin:auto; width: 100%;">
 {% for member in site.data.Fonti_Bibliografiche %}
   <tr>
-    <td style="width: 35%; margin:auto;" >
-      <table style="margin:auto; width: 100%;" >
+    <td>
+      <table>
        <tr>
 	 <td>Autore/Autori</td>
          <td>{{member.autore}}</td>
@@ -21,14 +21,8 @@
        </tr>
       </table>
     </td>
-    <td style="width: 65%; margin:auto;" >
-      <!-- <table style="margin:auto; width: 100%; box-sizing: border-box; overflow-x: auto;" >
-       <tr>
-         <td> -->
-           <a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="width:100%;" /></a>
-         <!-- </td>
-       </tr>
-      </table> -->
+    <td>
+       <a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="width:50%;" /></a>
     </td>
   </tr>
 {% endfor %}
