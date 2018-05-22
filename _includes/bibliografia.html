@@ -1,7 +1,7 @@
 <table style="margin:auto; width: 100%;">
 {% for member in site.data.Fonti_Bibliografiche %}
   <tr>
-    <td>
+    <td style="width: 50%;">
       <table>
        <tr>
 	 <td>Autore/Autori</td>
@@ -21,8 +21,8 @@
        </tr>
       </table>
     </td>
-    <td>
-       <a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="width:50%;" /></a>
+    <td style="width: 50%;">
+       <a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="width:100%;" /></a>
     </td>
   </tr>
 {% endfor %}
