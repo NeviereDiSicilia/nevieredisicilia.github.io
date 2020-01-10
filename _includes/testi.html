@@ -1,16 +1,16 @@
 <table style="margin:auto; width: 100%;">
 {% for member in site.data.Testi %}
   <tr>
-    <td style="width: 40%;">
+    <td style="width: 20%;">
       <table>
        <tr>	      
          <td>
-           <a href={{member.url_testo}} target="_blank"><img src="https://nevieredisicilia.github.io/images/pdf_icon.png" style="display: block; width: 100%; height: auto; margin: 0 auto;" /></a>
+           <a href={{member.url_testo}} target="_blank"><img src={{member.url_foto_copertina}} style="display: block; width: 100%; height: auto; margin: 0 auto;" /></a>
 	 </td>
 	</tr>
       </table>	      
     </td>	  
-    <td style="width: 60%;">
+    <td style="width: 80%;">
       <table>
        <tr>
 	 <td>Autore/Autori</td>
