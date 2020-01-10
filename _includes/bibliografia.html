@@ -1,17 +1,12 @@
 <table style="margin:auto; width: 100%;">
 {% for member in site.data.Fonti_Bibliografiche %}
-  <tr>
-    <td style="width: 30%;">
+  <tr>	  
+    <td>
       <table>
-       <tr>	      
-         <td>
-           <a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="display: block; width: 100%; height: auto; margin: 0 auto;" /></a>
-	 </td>
-	</tr>
-      </table>	      
-    </td>	  
-    <td style="width: 70%;">
-      <table>
+       <tr>
+	 <td></td>
+         <td><a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="display: block; width: 100%; height: auto; margin: 0 auto;" /></a></td>
+       </tr>
        <tr>
 	 <td>Autore/Autori</td>
          <td>{{member.autore}}</td>
