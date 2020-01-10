@@ -1,0 +1,35 @@
+<table style="margin:auto; width: 100%;">
+{% for member in site.data.Testi %}
+  <tr>
+    <td style="width: 30%;">
+      <table>
+       <tr>	      
+         <td>
+           <a href="{{member.url_foto_copertina}}" target="_blank"><img src="{{ member.url_foto_copertina}}" style="display: block; width: 100%; height: auto; margin: 0 auto;" /></a>
+	 </td>
+	</tr>
+      </table>	      
+    </td>	  
+    <td style="width: 70%;">
+      <table>
+       <tr>
+	 <td>Autore/Autori</td>
+         <td>{{member.autore}}</td>
+       </tr>
+       <tr>
+	<td>Titolo</td>
+	<td>{{member.titolo}}</td>
+       </tr>
+       <tr>
+	<td>Sottotitolo</td>
+	<td>{{member.sottotitolo}}</td>
+       </tr>
+       <tr>
+	<td>Casa Editrice</td>
+	<td>{{member.editrice}}</td>
+       </tr>
+      </table>
+    </td>
+  </tr>
+{% endfor %}
+</table>
