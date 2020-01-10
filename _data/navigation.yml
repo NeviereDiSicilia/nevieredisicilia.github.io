@@ -10,6 +10,9 @@
 - link: /contribuisci.html
   name: Contribuisci
   highlight: true
-- link: /contatti.html
+- link: /documenti.html
+  name: Documenti
+  highlight: true
+- link: /bibliografia.html
   name: Bibliografia
   highlight: true
