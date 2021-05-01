@@ -1,13 +1,23 @@
 <p>Work in Progress!</p>
 <table style="margin:auto; width: 100%;">
-{% for member in site.data.Testi %}
+{% for member in site.data.Testimonianze %}
   <tr> 
     <td>
       <table style="border: 1px solid black;">      
        <tr>
-	 <td>Autore/Autori</td>
-         <td>{{member.autore}}</td>
+		<td>Autore dell'Intervista</td>
+        <td>{{member.autore_intervista}}</td>
        </tr>
+       <tr>
+	   <tr>
+		<td>Data dell'Intervista</td>
+        <td>{{member.data_intervista}}</td>
+       </tr>
+	   <tr>
+		<td>Luogo dell'Intervista</td>
+        <td>{{member.luogo_intervista}}</td>
+       </tr>
+       <tr>
        <tr>
 	<td>Titolo</td>
 	<td><a href={{member.url_testo}} target="_blank">{{member.titolo}}</a></td>
