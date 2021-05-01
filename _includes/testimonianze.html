@@ -18,30 +18,34 @@
         <td>{{member.luogo_intervista}}</td>
        </tr>
        <tr>
-       <tr>
-	<td>Titolo</td>
-	<td><a href={{member.url_testo}} target="_blank">{{member.titolo}}</a></td>
+		<td>Nome e Cognome Soggetto Intervistato</td>
+		<td>{{member.nome_cognome_intervistato }}</td>
        </tr>
        <tr>
-	<td>Note</td>
-	<td>{{member.note}}</td>
+		<td>Data di Nascita Soggetto Intervistato</td>
+		<td>{{member.data_nascita_intervistato}}</td>
+       </tr>
+	   <tr>
+		<td>Età del Soggetto Intervistato all'epoca dell'intervista</td>
+		<td>{{member.eta_intervistato}}</td>
        </tr>
        <tr>
-	<td>Casa Editrice</td>
-	<td>{{member.editrice}}</td>
+	   <tr>
+		<td>Notizie sul Soggetto Intervistato</td>
+		<td>{{member.notizie_su_intervistato}}</td>
+       </tr>
+       <tr>	   
+		<td>Descrizione dell'Intervista</td>
+		<td>{{member.descrizione_intervista}}</td>
        </tr>
        <tr>
-	<td>Luogo di Pubblicazione</td>
-	<td>{{member.luogo_pubblicazione}}</td>
+		<td>Durata dell'Intervista in minuti</td>
+		<td>{{member.durata_intervista_minuti}}</td>
        </tr>
-       <tr>
-	<td>Anno di Pubblicazione</td>
-	<td>{{member.anno_pubblicazione}}</td>
-       </tr>
-       <tr>
-	<td>Numero di Pagine</td>
-	<td>{{member.n_pagine}}</td>
-       </tr>	      
+	   <tr>
+		<td>Testimonianza Audio</td>
+		<td><a href={{member.url_audio_video}} target="_blank">click per ascoltare la registrazione audio</a></td>
+       </tr>	
       </table>
     </td>
   </tr>
