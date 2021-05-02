@@ -18,7 +18,7 @@ function parseGetVars()
 <script type="text/javascript">
 var get = parseGetVars();
 var neviera = get['neviera'];
-document.write(neviera);
+//document.write(neviera);
 </script>
 
 <script>/*	
@@ -84,7 +84,7 @@ $.when(getData(data)).done(function(response){
 {% endcomment %}
 
 {% for member in site.data.Neviere_di_Sicilia %}
-  {% if member.name == "Mussomeli" %}
+  {% if member.name == neviera %}
     {% assign data = member %}
 	{% for pair in data %}
      {{ pair | inspect }}
