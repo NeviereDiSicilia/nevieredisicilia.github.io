@@ -86,11 +86,10 @@ $.when(getData(data)).done(function(response){
 {% for member in site.data.Neviere_di_Sicilia %}
   {% if member.name == "Mussomeli" %}
     {% assign row = member %}
+	{% for pair in row %}
+     {{ pair | inspect }}
+    {% endfor %}
   {% endif %}
-  {% for pair in row %}
-    {{ pair | inspect }}
-  {% endfor %}
-{% endfor %}
 
 
 {% comment %}
