@@ -44,13 +44,13 @@ var data;
 	});*/
 </script>
 <script>
-function getData(ID) {
+function getData(data) {
   return $.ajax({
     url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
     method: "GET",
     dataType: "text",
     //async: true,  //default async call
-    data: {action: "get", id: ID },
+    data: {action: "get", id: data },
     success: function(response) {
     {
 		tutto = $.csv.toArrays(response);
@@ -67,8 +67,9 @@ function getData(ID) {
   });
 }
 
-$.when(getData(YOUR_ID)).done(function(response){
+$.when(getData(data)).done(function(response){
     //access response data here
+	return data;
 });
 </script>
 <table style="width: 100%; margin:auto; border: none;" >
