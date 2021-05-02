@@ -83,7 +83,7 @@ $.when(getData(data)).done(function(response){
 <p>n. neviere censite: {{ forloop.length }}</p>
 {% endcomment %}
 
-{% for member in site.data.data.Neviere_di_Sicilia %}
+{% for member in site.data.Neviere_di_Sicilia %}
   {% if member.name == neviera %}
     {% assign row = {{ member }} %}
 	{{ member }}
