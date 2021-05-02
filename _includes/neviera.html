@@ -76,12 +76,23 @@ $.when(getData(data)).done(function(response){
 {% comment %}
 {% assign row = site.data.Neviere_di_Sicilia[0] %}
 {{ row | inspect }}
-{% endcomment %}
+
 
 {% assign row = site.data.Neviere_di_Sicilia[0] %}
 {% for pair in row %}
   {{ pair | inspect }}
 {% endfor %}
+{% endcomment %}
+
+
+{% for member in site.data.data.Neviere_di_Sicilia %}
+  {% if member.name == neviera %}
+    {{ member.comune | inspect }}
+  {% endif %}
+{% endfor %}
+
+
+
 
 {% comment %}
 {% assign groups = site.data.Neviere_di_Sicilia %}
