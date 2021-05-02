@@ -87,7 +87,7 @@ $.when(getData(data)).done(function(response){
 
 {% for member in site.data.data.Neviere_di_Sicilia %}
   {% if member.name == "Mussomeli" %}
-    {% assign row = { member }}
+    {% assign row = { member } %}
     {{ row | inspect }}
   {% endif %}
 {% endfor %}
