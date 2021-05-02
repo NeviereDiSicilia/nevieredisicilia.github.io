@@ -73,8 +73,10 @@ $.when(getData(data)).done(function(response){
 });
 </script>
 
+{% comment %}
 {% assign row = site.data.Neviere_di_Sicilia[0] %}
 {{ row | inspect }}
+{% endcomment %}
 
 {% assign row = site.data.Neviere_di_Sicilia[0] %}
 {% for pair in row %}
