@@ -72,6 +72,25 @@ $.when(getData(data)).done(function(response){
 	return data;
 });
 </script>
+
+{% assign row = site.data.Neviere_di_Sicilia[0] %}
+{{ row | inspect }}
+
+{% assign row = site.data.Neviere_di_Sicilia[0] %}
+{% for pair in row %}
+  {{ pair | inspect }}
+{% endfor %}
+
+{% assign groups = site.data.Neviere_di_Sicilia %}
+<ul>
+{% for g in groups %}
+{% assign leads = g.items | where: neviera %}
+<li>name : {{ g.name }}</li>
+{% endfor %}
+</ul>
+
+
+
 <table style="width: 100%; margin:auto; border: none;" >
     <tr style="border: none;" >
 	<td style="border: none;" >
