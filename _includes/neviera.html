@@ -78,6 +78,12 @@ $.when(getData(data)).done(function(response){
 {{ row | inspect }}
 {% endcomment %}
 
+
+{% for element in site.data.Neviere_di_Sicilia %}
+{% capture number %}{{ forloop.length }}{% endcapture %}
+{% endfor %}
+<p>n. neviere censite: {{ forloop.length }}</p>
+
 {% assign row = site.data.Neviere_di_Sicilia[0] %}
 {% for pair in row %}
   {{ pair | inspect }}
