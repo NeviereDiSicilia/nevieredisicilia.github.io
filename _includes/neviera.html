@@ -31,11 +31,13 @@ var data;
 	  success: function(response)  
 	  {
 		var tutto = $.csv.toArrays(response);
+		var curr_neviera;
+		var data;
 		var i;
 		for (i = 0; i < tutto.length; i++) {
-		    var curr_neviera = tutto[i];	  
+		    curr_neviera = tutto[i];	  
             if (curr_neviera[2] === neviera) {
-			var data = curr_neviera;
+				data = curr_neviera;
 		    }		
 		//generateHtmlTable(data);
 	    }   
