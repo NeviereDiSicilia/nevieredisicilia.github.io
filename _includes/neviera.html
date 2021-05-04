@@ -86,9 +86,11 @@ $.when(getData(data)).done(function(response){
 <p>n. neviere censite: {{ forloop.length }}</p>
 {% endcomment %}
 
-{% for row in site.data.Current_Neviera %}
-	{% assign data = row.current_neviera %}
+{% for member in site.data.Current_Neviera %}
+	{% assign data = member.current_neviera %}
+	{{ data }}
 {% endfor %}
+	{{ data }}
 
 {% comment %}
 {% for member in site.data.Neviere_di_Sicilia %}
