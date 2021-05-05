@@ -14,7 +14,6 @@ function parseGetVars()
   }
   return args;
 };
-document.write('var args: ' + args);
 
 var get = parseGetVars();
 var neviera = get['neviera'];
@@ -27,9 +26,9 @@ document.write('var neviera: ' + neviera);
      // ready to be converted into an Array
       datas = $.csv.toArrays(CSVdata);
      // console.log(data);
-	 document.write('var data1: ' + datas);
+	 //document.write('var data1: ' + datas);
   });
-  document.write('var data2: ' + datas);
+  //document.write('var data2: ' + datas);
 /*	
 var data;
 	$.ajax({
