@@ -19,6 +19,32 @@ var get = parseGetVars();
 var neviera = get['neviera'];
 document.write('var neviera: ' + neviera);
 
+// original script begins
+var data;
+	$.ajax({
+	  type: "GET",  
+	  url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
+	  dataType: "text",
+      async:false,      
+	  success: function(response)  
+	  {
+		tutto = $.csv.toArrays(response);
+		var i;
+		for (i = 0; i < tutto.length; i++) {
+		    var curr_neviera = tutto[i];	  
+            if (curr_neviera[2] === neviera) {
+			data = curr_neviera;
+		    }		
+		//generateHtmlTable(data);
+	    }   
+	  }
+	});
+// original script ends
+
+
+
+
+
 
   // sent a GET request to retrieve the CSV file contents
   var datass = $.get("https:nevieredisicilia.github.io/neviere/Current_Neviera.csv", function(CSVdata) {
@@ -31,7 +57,7 @@ document.write('var neviera: ' + neviera);
   
   document.write('var datass: ' + datass);
   
-  
+/*  
 var data =
 	$.ajax({
 	  type: 'GET',  
@@ -52,7 +78,7 @@ var data =
 		//generateHtmlTable(data);
 	    }   
 	  }
-	});
+	});*/
 </script>
 <script>
 /*
