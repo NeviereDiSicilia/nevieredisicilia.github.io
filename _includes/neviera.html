@@ -13,12 +13,13 @@ function parseGetVars()
     }
   }
   return args;
+  document.write('var args: ' + args);
 }</script>
 
 <script type="text/javascript">
 var get = parseGetVars();
 var neviera = get['neviera'];
-//document.write(neviera);
+document.write('var neviera: ' + neviera);
 
 
   // sent a GET request to retrieve the CSV file contents
@@ -26,7 +27,8 @@ var neviera = get['neviera'];
      // CSVdata is populated with the file contents
      // ready to be converted into an Array
       data = $.csv.toArrays(CSVdata);
-      console.log(data)
+     // console.log(data);
+	 document.write('var data: ' + data);
   });
 /*	
 var data;
