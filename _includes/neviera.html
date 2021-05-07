@@ -123,15 +123,16 @@ $.when(getData(data)).done(function(response){
 {% comment %}
 {% assign row = site.data.Neviere_di_Sicilia[0] %}
 {{ row | inspect }}
+{% endcomment %}
 
 {% for element in site.data.Neviere_di_Sicilia %}
 {% capture number %}{{ forloop.length }}{% endcapture %}
 {% endfor %}
 <p>n. neviere censite: {{ forloop.length }}</p>
-{% endcomment %}
+
 
 {% assign neviera_l = neviera %}
-{{ neviera_l }}
+<p>neviera_l: {{ neviera_l }}</p>
 
 
 {% for member in site.data.Current_Neviera %}
