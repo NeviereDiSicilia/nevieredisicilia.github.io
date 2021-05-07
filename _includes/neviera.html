@@ -16,9 +16,7 @@ function parseGetVars()
 };
 
 var get = parseGetVars();
-{% capture neviera_l %}
 var neviera = get['neviera'];
-{% endcapture %}
 document.write('var neviera: ' + neviera);
 
 // original script begins
@@ -134,6 +132,7 @@ $.when(getData(data)).done(function(response){
 {% endfor %}
 <p>n. neviere censite: {{ number }}</p>
 
+{% capture neviera_l %} {{ neviera }} {% endcapture %}
 <p>neviera_l: {{ neviera_l }}</p>
 
 
