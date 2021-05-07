@@ -163,10 +163,10 @@ $.when(getData(data)).done(function(response){
 {% endfor %}
 </ul>
 {% endcomment %}
-<?php
+{% raw %}<?php
 $var=$_GET['neviera'];
 echo $var;
-?>
+?>{% endraw %}
 
 <table style="width: 100%; margin:auto; border: none;" >
     <tr style="border: none;" >
