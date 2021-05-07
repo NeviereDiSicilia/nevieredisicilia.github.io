@@ -133,7 +133,12 @@ $.when(getData(data)).done(function(response){
 <p>n. neviere censite: {{ forloop.length }}</p>
 
 
-{% capture neviera_l %}neviera{% endcapture %}
+{% capture neviera_l %}
+<script>
+var get = parseGetVars();
+var neviera = get['neviera'];
+</script>
+{% endcapture %}
 <p>neviera_l: {{ neviera_l }}</p>
 
 
