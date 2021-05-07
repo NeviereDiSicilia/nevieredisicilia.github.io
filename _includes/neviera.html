@@ -133,8 +133,9 @@ $.when(getData(data)).done(function(response){
 <p>n. neviere censite: {{ forloop.length }}</p>
 
 
-{% assign neviera_l = neviera %}
+{% capture neviera_l %}neviera{% endcapture %}
 <p>neviera_l: {{ neviera_l }}</p>
+
 
 
 {% for member in site.data.Current_Neviera %}
