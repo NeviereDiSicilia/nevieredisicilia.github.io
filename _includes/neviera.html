@@ -16,7 +16,9 @@ function parseGetVars()
 };
 
 var get = parseGetVars();
+{% capture neviera_l %}
 var neviera = get['neviera'];
+{% endcapture %}
 document.write('var neviera: ' + neviera);
 
 // original script begins
@@ -130,15 +132,8 @@ $.when(getData(data)).done(function(response){
 {% for element in site.data.Neviere_di_Sicilia %}
 {% capture number %}{{ forloop.length }}{% endcapture %}
 {% endfor %}
-<p>n. neviere censite: {{ forloop.length }}</p>
+<p>n. neviere censite: {{ number }}</p>
 
-
-{% capture neviera_l %}
-<script>
-var get = parseGetVars();
-var neviera = get['neviera'];
-</script>
-{% endcapture %}
 <p>neviera_l: {{ neviera_l }}</p>
 
 
