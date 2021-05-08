@@ -74,14 +74,12 @@ var neviera = get['neviera'];
 document.write('var neviera: ' + neviera);
 
 // original script begins
-function getData ()
-  {
+var data;
 	$.ajax({
 	  method: "GET",  
 	  url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
 	  dataType: "text",
       async:true,
-	  
 	  success: function(response)  
 	  {
 		tutto = $.csv.toArrays(response);
@@ -96,7 +94,7 @@ function getData ()
 		alert ("ramo ok!");	
 	    }   
 	  },
-	  error: function(err)
+	  error: function(xhr, err)
 	  {
 				alert(err)
 	  },
@@ -107,9 +105,8 @@ function getData ()
 	  }
 	 
 	});
-  };
   
-  var data = getData();
+  //var data = getData();
   
 // original script ends
 
