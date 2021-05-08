@@ -27,7 +27,7 @@ var data;
 	  method: "GET",  
 	  url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
 	  dataType: "text",
-      async:true,
+      async:false,
 	  success: function(response)  
 	  {
 		tutto = $.csv.toArrays(response);
@@ -39,17 +39,16 @@ var data;
 		    }		
 		//generateHtmlTable(data);
 		//return datac;
-		alert ("ramo ok!");	
+		document.write("ramo ok!");	
 	    }   
 	  },
-	  error: function(xhr, err)
+	  error: function(err)
 	  {
-				alert(err)
+		document.write(err)
 	  },
-	  complete: function (xhr, status)
+	  complete: function (status)
 	  {
-	  alert (xhr);
-	  alert (status);
+		document.write(status);
 	  }
 	 
 	});
