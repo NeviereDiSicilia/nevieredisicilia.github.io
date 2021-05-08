@@ -35,7 +35,7 @@ var data;
 		for (i = 0; i < tutto.length; i++) {
 		    var curr_neviera = tutto[i];	  
             if (curr_neviera[2] === neviera) {
-			datac = curr_neviera;
+			data = curr_neviera;
 		    }		
 		//generateHtmlTable(data);
 		//return datac;
@@ -59,7 +59,7 @@ var data;
 
 
   // sent a GET request to retrieve the CSV file contents
-  var datass = $.get("https:nevieredisicilia.github.io/neviere/Current_Neviera.csv", function(CSVdata) {
+/*  var datass = $.get("https:nevieredisicilia.github.io/neviere/Current_Neviera.csv", function(CSVdata) {
      // CSVdata is populated with the file contents
      // ready to be converted into an Array
       datas = $.csv.toArrays(CSVdata);
@@ -70,7 +70,7 @@ var data;
   document.write('\r\n var datass: ' + datass);
   document.write('\r\n datass[0]: ' + datass[0]);
   document.write('\r\n datass[1]: ' + datass[1]);
-  
+*/  
 /*  
 var data =
 	$.ajax({
