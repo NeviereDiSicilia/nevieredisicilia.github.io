@@ -26,7 +26,8 @@ function getData ()
 	  method: "GET",  
 	  url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
 	  dataType: "text",
-      async:false,      
+      async:true,
+	  
 	  success: function(response)  
 	  {
 		tutto = $.csv.toArrays(response);
@@ -44,6 +45,11 @@ function getData ()
 	  error: function(err)
 	  {
 				alert(err)
+	  },
+	  complete: function (xhr, status)
+	  {
+	  alert (xhr);
+	  alert (status);
 	  }
 	 
 	});
