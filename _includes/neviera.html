@@ -30,7 +30,7 @@ var data;
       //async:false,
 	  success: function(response)  
 	  {
-		tutto = $.csv.toArrays(response);
+		var tutto = $.csv.toArrays(response);
 		var i;
 		for (i = 0; i < tutto.length; i++) {
 		    var curr_neviera = tutto[i];	  
