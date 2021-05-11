@@ -18,7 +18,6 @@ function parseGetVars()
 var get = parseGetVars();
 var neviera = get['neviera'];
 document.write('Le funzioni per la visualizzazione dei dati di dettaglio di ogni singola neviera sono in manutenzione. Ci scusiamo per il disagio');
-document.write('\r\n');
 document.write('var neviera: ' + neviera);
 
 // original script begins
@@ -188,10 +187,6 @@ $.when(getData(data)).done(function(response){
 {% endfor %}
 </ul>
 {% endcomment %}
-<?php
-$var=$_GET['neviera'];
-echo $var;
-?>
 
 <table style="width: 100%; margin:auto; border: none;" >
     <tr style="border: none;" >
