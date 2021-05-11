@@ -53,6 +53,7 @@ var data;
 	 
 	});
 */
+/*
 var data =
 $(document).ready(function() {
     $.ajax({
@@ -72,6 +73,23 @@ $(document).ready(function() {
 		}
 	});
 });
+
+*/
+$.ajax({
+        url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
+        dataType: "text",
+      }).done(successFunction);
+	  
+function successFunction(data) {
+			var tutto = $.csv.toArrays(data);
+			var i;
+			for (i = 0; i < tutto.length; i++) {
+				var curr_neviera = tutto[i];	  
+				if (curr_neviera[2] === neviera) {
+				data = curr_neviera;
+				}
+			}
+};
   
   //var data = getData();
   
