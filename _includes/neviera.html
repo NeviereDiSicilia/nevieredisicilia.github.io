@@ -75,6 +75,7 @@ $(document).ready(function() {
 });
 
 */
+/*
 $.ajax({
         url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
         dataType: "text",
@@ -92,6 +93,23 @@ function successFunction(data) {
 };
   
   //var data = getData();
+*/
+
+var url_sbagliata = "http://foo/bar.json"; // URL inesistente !!!
+$.ajax({
+  url: url_sbagliata,
+  dataType: 'json',
+  success: function(jsonResponse, textStatus, jqXHR) {
+    // ...
+    console.info('Ajax ha funzionato correttamente!');
+  },
+  error: function(jqXHR, textStatus, errorThrown) {
+    // ...
+    console.error('Ajax NON ha funzionato!');
+  }
+})
+
+
   
 // original script ends
 /*
