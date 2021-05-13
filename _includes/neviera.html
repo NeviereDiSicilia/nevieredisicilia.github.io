@@ -20,8 +20,29 @@ var neviera = get['neviera'];
 document.write('Le funzioni per la visualizzazione dei dati di dettaglio di ogni singola neviera sono in manutenzione. Ci scusiamo per il disagio');
 document.write('var neviera: ' + neviera);
 
-// original script begins
+var data;
+	$.ajax({
+	  type: "GET",  
+	  url: "https://nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
+	  dataType: "text",
+      async:false,      
+	  success: function(response)  
+	  {
+		tutto = $.csv.toArrays(response);
+		var i;
+		for (i = 0; i < tutto.length; i++) {
+		    var curr_neviera = tutto[i];	  
+            if (curr_neviera[2] === neviera) {
+			data = curr_neviera;
+		    }		
+		//generateHtmlTable(data);
+	    }   
+	  }
+	});
 
+// original script ends
+// original script begins
+/*
 var data;
 	$.ajax({
 	  method: "GET",  
@@ -53,7 +74,7 @@ var data;
 	  }
 	 
 	});
-
+*/
 /*
 var data =
 $(document).ready(function() {
@@ -189,7 +210,7 @@ $.when(getData(data)).done(function(response){
 {% comment %}
 {% assign row = site.data.Neviere_di_Sicilia[0] %}
 {{ row | inspect }}
-{% endcomment %}
+
 
 {% for element in site.data.Neviere_di_Sicilia %}
 {% capture number %}{{ forloop.length }}{% endcapture %}
@@ -199,14 +220,12 @@ $.when(getData(data)).done(function(response){
 {% capture neviera_l %} {{ neviera }} {% endcapture %}
 <p>neviera_l: {{ neviera_l }}</p>
 
-
-
 {% for member in site.data.Current_Neviera %}
 	{% assign data = member.current_neviera %}
 	{{ data }}
 {% endfor %}
 	{{ data }}
-
+{% endcomment %}
 {% comment %}
 {% for member in site.data.Neviere_di_Sicilia %}
   {% if member.name == "Amormino" %}
