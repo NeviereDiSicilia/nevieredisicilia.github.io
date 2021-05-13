@@ -95,19 +95,21 @@ function successFunction(data) {
   //var data = getData();
 */
 
-var url_sbagliata = "https://foo/bar.json"; // URL inesistente !!!
-$.ajax({
-  url: url_sbagliata,
-  dataType: 'json',
-  success: function(jsonResponse, textStatus, jqXHR) {
-    // ....
-    console.info('Ajax ha funzionato correttamente!');
-  },
-  error: function(jqXHR, textStatus, errorThrown) {
-    // ....
-    console.error('Ajax NON ha funzionato!');
-  }
-})
+$(document).ready(function() {
+  $.ajax({ type: "GET", url: "https:nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv", dataType: "text",
+	success: function(response) {
+			var tutto = $.csv.toArrays(response);
+			var i;
+			for (i = 0; i < tutto.length; i++) {
+				var curr_neviera = tutto[i];	  
+				if (curr_neviera[2] === neviera) {
+				data = curr_neviera;
+				};
+			};
+	},
+	error: function(request, error, tipo_errore) { alert(error+': '+ tipo_errore); }
+  });
+});
 
 
   
