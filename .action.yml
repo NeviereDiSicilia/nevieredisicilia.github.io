@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+- 2.3.3
+script:
+- set -e
+- bundle exec jekyll build
+after_success:
+- git clone https://$GH_REF
+- cd $(basename ${GH_REF%.git})
+- git config user.name "picomiles"
+- git config user.email ${EMAIL}
+- rsync -az --delete --exclude '.git*' ../_site/ .
+- touch .nojekyll
+- git add -A .
+- git commit -m "Generated Site by Github Action"
+- git push -f "https://${GH_TOKEN}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
+branches:
+  only:
+  - development
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_REF: github.com/NeviereDiSicilia/nevieredisicilia.github.io
+  - TARGET_BRANCH: master
