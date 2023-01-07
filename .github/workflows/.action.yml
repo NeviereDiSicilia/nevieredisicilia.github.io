@@ -11,6 +11,3 @@ on:
   push:
     branches:
       - development
-env:
-  global:
-  - TARGET_BRANCH: master
