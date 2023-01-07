@@ -1,6 +1,8 @@
-language: ruby
-rvm:
-- 2.3.3
+jobs:
+  build:
+    strategy:
+      matrix:
+        ruby: [2.3.3]
 script:
 - set -e
 - bundle exec jekyll build
@@ -14,9 +16,10 @@ after_success:
 - git add -A .
 - git commit -m "Generated Site by Github Action"
 - git push -f "https://${GH_TOKEN}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
-branches:
-  only:
-  - development
+on:
+  push:
+    branches:
+      - development
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
