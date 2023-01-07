@@ -1,4 +1,4 @@
-name: action_prova
+name: prova
 jobs:
   github-pages:
     runs-on: ubuntu-latest
