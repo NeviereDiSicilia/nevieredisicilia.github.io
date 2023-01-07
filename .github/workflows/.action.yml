@@ -8,6 +8,6 @@ jobs:
         with:
           token: ${{ secrets.NEVIERE_TOKEN }}
 on:
-  commit:
+  push:
     branches:
       - development
