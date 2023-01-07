@@ -4,6 +4,11 @@ jobs:
     strategy:
       matrix:
         ruby: [2.3.3]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.NEVIERE_TOKEN }}
 script:
 - set -e
 - bundle exec jekyll build
