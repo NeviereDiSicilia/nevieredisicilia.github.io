@@ -13,5 +13,4 @@ on:
       - development
 env:
   global:
-  - GH_REF: github.com/NeviereDiSicilia/nevieredisicilia.github.io
   - TARGET_BRANCH: master
