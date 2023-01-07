@@ -13,6 +13,5 @@ on:
       - development
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GH_REF: github.com/NeviereDiSicilia/nevieredisicilia.github.io
   - TARGET_BRANCH: master
