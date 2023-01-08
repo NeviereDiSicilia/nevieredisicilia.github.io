@@ -1,5 +1,5 @@
 ## Benvenuti nel repository di Neviere di Sicilia
-
+![example workflow](https://github.com/nevieredisicilia/nevieredisicilia.github.io/actions/workflows/development.yml/badge.svg?branch=development?event=push)
 Questo repository accoglie il codice, i dati e quanto necessario alla pubblicazione del sito <a href="https://nevieredisicilia.github.io" target="_blank" ><b>nevieredisicilia.github.io</b></a>
 
 Obiettivo di questo progetto è censire le neviere presenti in Sicilia con il contributo di chiunque sia in grado di fornire informazioni esatte sulla loro esistenza.
