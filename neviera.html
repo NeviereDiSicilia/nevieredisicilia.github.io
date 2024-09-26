@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="">
+	
+  <head>
+  <!--<meta charset="UTF-8">-->
+  <meta charset=ISO-8859-15">
+  <title>Neviere di Sicilia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+  <!--<script type="text/javascript" src="https:nevieredisicilia.github.io/js/csv.js"></script>-->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>{} | Neviere di Sicilia</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="{}" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Qesto progetto si pone l’obiettivo di censire le neviere siciliane e nasce da un’idea di Luigi Romana, cultore, studioso, storico ed esperto di tutto ciò che riguarda la gelateria, e di Nino Galante, mappatore digitale ed anch’egli appassionato di storia della gelateria e della pasticceria, siciliana in particolare." />
+<meta property="og:description" content="Qesto progetto si pone l’obiettivo di censire le neviere siciliane e nasce da un’idea di Luigi Romana, cultore, studioso, storico ed esperto di tutto ciò che riguarda la gelateria, e di Nino Galante, mappatore digitale ed anch’egli appassionato di storia della gelateria e della pasticceria, siciliana in particolare." />
+<link rel="canonical" href="/neviera.html" />
+<meta property="og:url" content="/neviera.html" />
+<meta property="og:site_name" content="Neviere di Sicilia" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="{}" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Qesto progetto si pone l’obiettivo di censire le neviere siciliane e nasce da un’idea di Luigi Romana, cultore, studioso, storico ed esperto di tutto ciò che riguarda la gelateria, e di Nino Galante, mappatore digitale ed anch’egli appassionato di storia della gelateria e della pasticceria, siciliana in particolare.","headline":"{}","url":"/neviera.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P96SWFYD1C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P96SWFYD1C');
+</script>
+</head>
+
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Neviere di Sicilia</h1>
+  <h2 class="project-tagline">Catasto delle Neviere di Sicilia</h2>
+  <a href="/index.html" class="btn">mappa neviere</a>
+  <a href="/elenco_neviere.html" class="btn">elenco neviere</a>
+  <a href="/progetto.html" class="btn">progetto e persone</a>
+  <a href="/contribuisci.html" class="btn">contribuisci</a>
+  <a href="/testimonianze.html" class="btn">testimonianze</a>
+  <a href="/testi.html" class="btn">testi</a>
+  <a href="/bibliografia.html" class="btn">bibliografia</a>
+</section>
+
+
+    <section class="main-content">
+      
+      
+	  <script type="text/javascript">
+function parseGetVars()
+{
+  var args = new Array();
+  var query = window.location.search.substring(1);
+  if (query)
+  {
+    var strList = query.split('&');
+    for(str in strList)
+    {
+      var parts = strList[str].split('=');
+      args[unescape(parts[0])] = unescape(parts[1]);
+    }
+  }
+  return args;
+};
+
+var get = parseGetVars();
+var neviera = get['neviera'];
+//document.write('Le funzioni per la visualizzazione dei dati di dettaglio di ogni singola neviera sono in manutenzione. Ci scusiamo per il disagio');
+//document.write('var neviera: ' + neviera);
+
+var data;
+	$.ajax({
+	  type: "GET",  
+	  url: "https://nevieredisicilia.github.io/neviere/Neviere_di_Sicilia.csv",
+	  dataType: "text",
+      async:false,      
+	  success: function(response)  
+	  {
+		tutto = $.csv.toArrays(response);
+		var i;
+		for (i = 0; i < tutto.length; i++) {
+		    var curr_neviera = tutto[i];	  
+            if (curr_neviera[2] === neviera) {
+			data = curr_neviera;
+		    }		
+		//generateHtmlTable(data);
+	    }   
+	  }
+	});
+
+</script>
+
+
+<table style="width: 100%; margin:auto; border: none;" >
+    <tr style="border: none;" >
+	<td style="border: none;" >
+	  <script>if (data[20]){
+		      javascript:document.write("<a href=" + data[20] + " target='_blank' ><img src=" + data[20] + " width='75%' /></a>");
+                  };	  
+	  </script>
+	</td>
+	<td style="border: none;" >
+	    <script>if (data[24]){
+		      javascript:document.write("<a href=" + data[24] + " target='_blank' >Vedi l'Album Fotografico</a>");
+                  };	  
+	    </script>
+	</td> 
+     </tr>
+</table>
+<table style="width: 100%; margin:auto;" >
+    <tr>
+	    <td>Nome Neviera</td><td><script>document.write(data[2]);</script></td>
+    </tr>
+    <tr>
+	<td>Comune di</td><td><script>document.write(data[4]);</script> (<script>document.write(data[5]);</script>)</td>	
+    </tr>
+   <tr>
+	<td>Località</td><td><script>document.write(data[3]);</script></td>
+    </tr>
+    <tr>
+	<td>Coordinate Geografiche (lat/lon)</td>
+	<!-- <td><script>document.write(data[6]);</script>/<script>document.write(data[7]);</script></td> -->
+	<td><script>javascript:document.write("<a href='http://www.openstreetmap.org/?mlat=" + data[6] + "&mlon=" + data[7] + "&zoom=14' target='_blank' >" + data[6] + "/" + data[7] + "</a>");</script></td>
+    </tr>
+    <tr>
+	<td>Altitudine s.l.m. (m)</td><td><script>document.write(data[8]);</script></td>
+    </tr>	
+    <tr>
+	<td>Descrizione</td><td><script>document.write(data[17]);</script></td>
+    </tr>
+    <tr>
+	<td>Stato di Conservazione</td><td><script>document.write(data[18]);</script></td>
+    </tr>
+    <tr>
+	<td>Epoca di Costruzione</td><td><script>document.write(data[19]);</script></td>
+    </tr>
+    <tr>
+	<td>Indicazioni per raggiungerla</td><td><script>document.write(data[22]);</script></td>
+    </tr>
+   <tr>
+	<td>Lunghezza lato nord (m)</td><td><script>document.write(data[9]);</script></td>
+    </tr>
+    <tr>
+	<td>Lunghezza lato est (m)</td><td><script>document.write(data[10]);</script></td>
+    </tr>
+    <tr>
+	<td>Lunghezza lato sud (m)</td><td><script>document.write(data[11]);</script></td>
+    </tr>
+    <tr>
+	<td>Lunghezza lato ovest (m)</td><td><script>document.write(data[12]);</script></td>
+    </tr>
+    <tr>
+	<td>Altezza fuori terra (m)</td><td><script>document.write(data[15]);</script></td>
+    </tr>
+    <tr>
+	<td>Diametro (m)</td><td><script>document.write(data[13]);</script></td>
+    </tr>
+    <tr>
+	<td>Profondità (m)</td><td><script>document.write(data[23]);</script></td>
+    </tr>
+    <tr>
+	<td>Spessore dei muri (m)</td><td><script>document.write(data[14]);</script></td>
+    </tr>
+    <tr>
+	<td>Pianta Neviera</td>
+	<td>
+	    <script>if (data[16]){
+		      javascript:document.write("<a href=" + data[16] + " target='_blank' ><img src=" + data[16] + " height='320' /></a>");
+                  };  
+	    </script>
+	</td>
+    </tr>
+    <tr>
+	<td>Rilevatore</td><td><script>document.write(data[21]);</script></td>
+    </tr>
+</table>
+
+
+	  
+      <footer class="site-footer">
+  <a rel="license noopener noreferrer" href="http://creativecommons.org/licenses/by-sa/4.0/deed.it" target="_blank"><img alt="Licenza Creative Commons" style="border-width:0;" src="https://i1.wp.com/i.creativecommons.org/l/by-sa/4.0/88x31.png" srcset="https://i1.wp.com/i.creativecommons.org/l/by-sa/4.0/88x31.png?zoom=2 1.5x" scale="1.5" width="88" height="31"></a><br/>
+  Salvo dove specificato diversamente, i contenuti di questo sito sono pubblicati con <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it" target="_blank">licenza Creative Commons Attribuzione - Condividi allo stesso modo 4.0 Internazionale</a>.<br/>
+  <!--<span class="site-footer-owner"><a href="">Neviere di Sicilia</a> is maintained by <a href=""></a>.</span>-->
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
